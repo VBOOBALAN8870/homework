@@ -1,0 +1,81 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;    
+  }
+body{
+    background-color: tomato;
+    /* background-image: url(./photo/DSC_0785.JPG); */
+    max-width: 100%;
+    max-height: 100%;
+}
+.center-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: tomato; */
+}
+.card-structure{
+    width: 300px;
+    height: 500px;
+    background-color: olive;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-structure::before{
+content: '';
+    background-image: linear-gradient(var(--rotate) ,#5ddcff, #3c67e3 43%, #4e00c2);
+    width: 104%;
+    height: 104%;
+    border-radius: 10px;
+z-index: -1;
+position: absolute;
+animation: rotate 2.5s linear infinite;
+}
+
+.card-structure:hover::before{
+background-image: url(./photo/DSC_0785.JPG);
+width: 105%;
+height: 105%;
+z-index: 100;
+background-size: contain;
+/* background-repeat: no-repeat; */
+}
+
+.card-structure::after {
+    position: absolute;
+    content: "";
+    top:   6px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(6px);
+    background-image: linear-gradient(var(--rotate),
+      
+       #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: rotate 2.5s linear infinite;
+  }  
+
+@keyframes rotate {
+    
+    0%{
+        /* transform: rotate(0deg); */
+        --rotate: 0deg;
+    }
+    100%{
+        /* transform: rotate(360deg); */
+        --rotate: 360deg;
+    }
+}
