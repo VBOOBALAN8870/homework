@@ -1,0 +1,76 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle-shape{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid rgb(12, 145, 207);
+    display: flex;
+    align-items: center;
+justify-content: center;
+}
+
+.center-circle{
+ position: absolute;
+ display: flex;
+    width: 20px;
+    height: 20px;
+background-color: red;
+    border-radius: 50%;
+justify-content: center;
+align-items: center;
+}
+.hour-nidel{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transform: rotate(90deg);
+  
+}
+.min-nidel{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+   transform: rotate(90deg);
+}
+.sec-nidel{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transform: rotate(90deg);
+}
+.hour-nidel::before{
+    content: '';
+    width: 60px;
+   border: 2px solid rgb(143, 55, 224);
+   position: relative;
+   right: 10px;
+   
+}
+.min-nidel::before{
+    content: '';
+    display: block;
+    width: 100px;
+    border-top: 4px solid rgb(44, 135, 196);
+    position: relative;
+    right: 25px;
+}
+.sec-nidel::before{
+    content: '';
+    right: 45px;
+    position: relative;
+    width: 140px;
+    border: 3px solid rgb(214, 197, 39);
+}
